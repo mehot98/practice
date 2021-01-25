@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+  </head>
+  <body>
+    <span>검색하시오.</span>
+    <input id="name" type="text" name="search" value="">
+
+
+
+    <script>
+function myFunction() {
+
+
+  location.replace("https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=" + document.getElementById("name").value);
+
+/*
+  location.replace("https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=" + select)
+
+*/
+}
+
+</script>
+
+<button onclick="myFunction()">Replace document</button>
+  </script>
+  </body>
+</html>

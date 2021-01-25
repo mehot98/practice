@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .canvas{
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transform</h1>
+    <canvas class="canvas" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.querySelector('.canvas');
+        const context = canvas.getContext('2d');
+        let scaleValue = 1;
+        let rotationValue = 0;
+
+        function toRadian(d){
+            return d * Math.PI/180;
+        }
+
+        function draw(){
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.save();
+            context.setTransform(1, 0, 0, 1, 0, 0);
+            context.translate(250, 250 );
+            context.scale(scaleValue, scaleValue);
+            context.rotate(toRadian(rotationValue));
+            scaleValue += 0.001;
+            rotationValue += 1;
+            context.strokeRect(-50, -50 ,100, 100);
+            context.restore();
+
+            requestAnimationFrame(draw);
+        }
+
+        
+        draw();
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image</h1>
+    <canvas class="canvas" width="600" height="400"></canvas>
+
+    <script>
+        const canvas = document.querySelector('.canvas');
+        const context = canvas.getContext('2d');
+
+        const imgElem = new Image();
+        imgElem.src = './coding.jpg';
+        imgElem.addEventListener('load', () => {
+        context.drawImage(imgElem, 0, 0, canvas.width ,canvas.height);
+    });
+
+    </script>
+
+</body>
+</html>

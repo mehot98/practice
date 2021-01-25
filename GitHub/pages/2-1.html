@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="canvas" width="900" height="800">이 브라우저는 캔버스를 지원하지 않습니다.</canvas>
+    
+
+    <script>
+        const canvas = document.querySelector('.canvas');
+        const context = canvas.getContext('2d');
+
+        context.fillRect(100, 100, 100, 100);
+        context.fillStyle = "red";
+        context.fillRect(50, 50, 100, 100);
+        context.fillStyle = '#65b05b';
+        context.fillRect(0, 0, 100, 100);
+        context.clearRect(75, 75 ,50, 50);
+        context.strokeRect(150, 150, 100, 100);
+
+        context.beginPath();
+        context.moveTo(200, 200);
+        context.lineTo(300,300);
+        context.stroke();
+
+        context.beginPath();
+        context.arc(450, 400, 50, 0, Math.PI * 2, false);
+        context.fill();
+
+    </script>
+</body>
+</html>

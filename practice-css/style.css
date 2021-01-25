@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-size: 2em;
+}
+
+h1, p {
+    margin: 0;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.item{
+    float: left;
+    padding: 5%;
+}
+
+.item-a{
+    width: 30%;
+    background-color: yellow;
+}
+
+.item-b{
+    width: 50%;
+    background-color: yellowgreen;
+    
+}
